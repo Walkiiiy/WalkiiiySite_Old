@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Walkiiiy -within cells interlinked</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body {
+            font-family: Arial, sans-serif; /* 使用 Arial 字体，如果不可用则使用 sans-serif 字体作为备选 */
+            color: #333; /* 文字颜色为深灰色 */
+            }
+
+            /* 将文字居中显示 */
+            .center {
+            display: flex; /* 使用 Flexbox 布局 */
+            justify-content: center; /* 在主轴上居中对齐 */
+            align-items: center; /* 在交叉轴上居中对齐 */
+            height: 85vh; /* 设置容器高度为视口高度的 100%，这样内容会居中显示在屏幕中间 */
+            line-height: 1.7; /*行距*/
+            }
+            
+            /* 导航栏样式 */
+            ol.navbar {
+            list-style-type: none; /* 去除默认的列表样式 */
+            margin: 0;
+            padding: 0;
+            /*background-color: #a3a3a3; /* 导航栏背景颜色 */
+            }
+
+            ol.navbar li {
+            display: inline-block; /* 将列表项显示为水平排列 */
+            }
+
+            ol.navbar li a {
+            display: block;
+            padding: 5px 30px; /* 调整导航项的内边距 */
+            color: #333; /* 导航项文字颜色 */
+            text-decoration: none;
+            }
+
+            #bottom_line {
+            text-align: center;/*水平居中*/
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- 导航栏 -->
+        <ol class="navbar">
+            <li><a href="index.html">home</a></li>
+            <li><a href="blog.html">blog</a></li>
+            <li><a href="#">works</a></li>
+            <li><a href="#">contact</a></li>
+        </ol>
+
+        <h1 class="center">Hello :)</h1>
+        <span class="underline"></span>
+
+        <p id="bottom_line">Welcome! This is the personal site of walkiiiy.</p>
+        
+
+    </body>
+</html>
