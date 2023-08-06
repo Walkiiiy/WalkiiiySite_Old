@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>/walkiiiyblog/photos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0px;
+        }
+
+        .image-container {
+            margin: 0px;
+        }
+
+        .image-container img {
+            width: 360px;
+            height: 360px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>last update:23.8.6</p>
+    <div class="gallery">
+        <div class="image-container">
+            <img src="../media/23_8_6/IMG_0910.JPG" alt="照片" onclick="openModal(this.src)">
+        </div>
+        <div class="image-container">
+            <img src="../media/23_8_6/IMG_1531.JPG" alt="照片" onclick="openModal(this.src)">
+        </div>
+        <div class="image-container">
+            <img src="../media/23_8_6/IMG_1539.JPG" alt="照片" onclick="openModal(this.src)">
+        </div>
+        <div class="image-container">
+            <img src="../media/23_8_6/IMG_1545.JPG" alt="照片" onclick="openModal(this.src)">
+        </div>
+        <div class="image-container">
+            <img src="../media/23_8_6/IMG_1587.JPG" alt="照片" onclick="openModal(this.src)">
+        </div>
+        <!-- 添加更多照片的image-container -->
+    </div>
+
+    <div class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.querySelector(".modal");
+            const modalImg = document.getElementById("modal-image");
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.querySelector(".modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
