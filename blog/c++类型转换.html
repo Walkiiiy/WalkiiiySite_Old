@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>c&plus;&plus;&#x7c7b;&#x578b;&#x8f6c;&#x6362;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h2 id="c类型转换">c++类型转换</h2>
+<h3 id="隐式类型转换">隐式类型转换</h3>
+<p>编译器自动完成，无需显示指定。在运算过程中，涉及不同数据类型的操作数。编译器会自动将其中一个操作数转换为更高精度的数据类型，以确保运算的正确性。包括将非布尔类型转换为布尔类型。</p>
+<h3 id="显示类型转换方法强制类型转换">显示类型转换方法（强制类型转换）</h3>
+<ul>
+<li>static_cast：任何明确定义的类型转换，只要不包含底层const，都可以使用。</li>
+<li>dynamic_cast：支持运行时类型识别。</li>
+<li>const_cast：只能改变运算对象的底层const，一般可用于去除const性质。</li>
+<li>reinterpret_cast：通常为运算对象的位模式提供低层次上的重新解释。</li>
+</ul>
+<pre><code class="language-c++"><span class="hljs-type">int</span> num = <span class="hljs-number">10</span>;
+<span class="hljs-type">double</span> d = <span class="hljs-built_in">static_cast</span>&lt;<span class="hljs-type">double</span>&gt;(num);  <span class="hljs-comment">// 使用static_cast将int转换为double</span>
+
+<span class="hljs-type">const</span> <span class="hljs-type">int</span>* ptr = &amp;num;
+<span class="hljs-type">int</span>* mutablePtr = <span class="hljs-built_in">const_cast</span>&lt;<span class="hljs-type">int</span>*&gt;(ptr);  <span class="hljs-comment">// 使用const_cast移除const属性</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Base</span> {};
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Derived</span> : <span class="hljs-keyword">public</span> Base {};
+
+Base* basePtr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Derived</span>();
+Derived* derivedPtr = <span class="hljs-built_in">dynamic_cast</span>&lt;Derived*&gt;(basePtr);  <span class="hljs-comment">// 使用dynamic_cast进行派生类向基类的转换</span>
+<span class="hljs-keyword">if</span> (derivedPtr) {
+    <span class="hljs-comment">// 成功转换</span>
+}
+
+<span class="hljs-type">int</span> intValue = <span class="hljs-number">42</span>;
+<span class="hljs-type">void</span>* voidPtr = <span class="hljs-built_in">reinterpret_cast</span>&lt;<span class="hljs-type">void</span>*&gt;(&amp;intValue);  <span class="hljs-comment">// 使用reinterpret_cast进行底层位模式转换</span>
+</code></pre>
+
+        
+        
+    </body>
+    </html>
