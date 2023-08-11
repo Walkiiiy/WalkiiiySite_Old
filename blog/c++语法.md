@@ -71,34 +71,6 @@ int x = 0, y = 0;
 int result = (x = 5, y = 10, x + y);  // 这里x和y都被赋值，result将是x+y的值，也就是15
 ```
 
-## 类型转换
-
-### 隐式类型转换
-编译器自动完成，无需显示指定。在运算过程中，涉及不同数据类型的操作数。编译器会自动将其中一个操作数转换为更高精度的数据类型，以确保运算的正确性。包括将非布尔类型转换为布尔类型。
-### 显示类型转换方法（强制类型转换）
-* static_cast：任何明确定义的类型转换，只要不包含底层const，都可以使用。
-* dynamic_cast：支持运行时类型识别。
-* const_cast：只能改变运算对象的底层const，一般可用于去除const性质。
-* reinterpret_cast：通常为运算对象的位模式提供低层次上的重新解释。
-```c++
-int num = 10;
-double d = static_cast<double>(num);  // 使用static_cast将int转换为double
-
-const int* ptr = &num;
-int* mutablePtr = const_cast<int*>(ptr);  // 使用const_cast移除const属性
-
-class Base {};
-class Derived : public Base {};
-
-Base* basePtr = new Derived();
-Derived* derivedPtr = dynamic_cast<Derived*>(basePtr);  // 使用dynamic_cast进行派生类向基类的转换
-if (derivedPtr) {
-    // 成功转换
-}
-
-int intValue = 42;
-void* voidPtr = reinterpret_cast<void*>(&intValue);  // 使用reinterpret_cast进行底层位模式转换
-```
 
 ## 面向对象
 ### 基类
@@ -186,47 +158,4 @@ public:
         // 派生类析构逻辑
     }
 };
-```
-## 静态变量
-静态变量在类或函数的内部创建，在类或函数初始化时就分配内存，但是并不会随类或函数的调用完毕而被清除。  
-即：所有的同类型函数或类，共用一个静态变量。
-* 静态局部变量：定义在函数内部，跨函数生命周期。
-```c++
-#include <iostream>
-
-void foo() {
-    static int counter = 0;  // 静态局部变量
-    counter++;
-    std::cout << "foo has been called " << counter << " times." << std::endl;
-}
-
-int main() {
-    foo();
-    foo();
-    foo();
-
-    return 0;
-}
-```
-* 静态环境变量：属于类，而不是属于对象，在所有对象之间共享，且可以在类的定义外部初始化。
-```c++
-class MyClass {
-public:
-    static int staticVar;  // 静态成员变量声明
-};
-
-int MyClass::staticVar = 0;  // 静态成员变量初始化
-
-int main() {
-    MyClass obj1;
-    MyClass obj2;
-
-    obj1.staticVar = 5;
-    std::cout << "obj2.staticVar: " << obj2.staticVar << std::endl;  // 输出为5
-
-    obj2.staticVar = 10;
-    std::cout << "obj1.staticVar: " << obj1.staticVar << std::endl;  // 输出为10
-
-    return 0;
-}
 ```
