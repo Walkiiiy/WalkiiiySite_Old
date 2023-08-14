@@ -1,4 +1,5 @@
 ### vue学习：简单notebook实现
+实践vue，javascript，css，html，实现基本的notebook功能。
 ```html
 <!DOCTYPE html>
 <html>
@@ -44,17 +45,38 @@
             list-style-type 设置列表项
             list-style-image 设置图片为列表项
 
+            边框样式:
+            border-style:设置边框颜色样式
+            margin-（left）:设置外边距
+            border-color:设置边框颜色
+            使用简写可以按照上右下左逆时针顺序依次定义每一条边框
+            
+
         -->
         <style>
-            body{background-color: rgb(240, 255, 251);}
-            .todo{background-color:rgba(50, 205, 128, 0.863);
+            body{
+                background-color: rgb(255, 237, 215);
+            }
+            .todo{background-color:rgba(142, 245, 193, 0.863);
                 color: rgb(0, 0, 0);
-                text-align:justify;}
-            #app{
-                background-color:rgb(227, 153, 61);
+                text-align:justify;
             }
             .header{
+                background-color:navajowhite;
+                margin-left: 100px;
+                margin-right: 100px;
+                margin-bottom: 5px;
                 text-align: center;
+                border-style: ridge;
+                border-width: light;
+                border-color:black;
+                border-radius: 15px;
+            }
+            ul{
+                margin-left: 50px;
+                margin-right: 50px;
+                border-width:light;
+                border-radius: 15px;
             }
         </style>
     </head>
