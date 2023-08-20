@@ -1,70 +1,84 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
         <title>Walkiiiy -within cells interlinked</title>
-
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <style>
-
-            body {
-            font-family: Arial, sans-serif; /* 使用 Arial 字体，如果不可用则使用 sans-serif 字体作为备选 */
-            color: #333; /* 文字颜色为深灰色 */
-            }
-
-            /* 将文字居中显示 */
-            .center {
-            display: flex; /* 使用 Flexbox 布局 */
-            justify-content: center; /* 在主轴上居中对齐 */
-            align-items: center; /* 在交叉轴上居中对齐 */
-            height: 85vh; /* 设置容器高度为视口高度的 100%，这样内容会居中显示在屏幕中间 */
-            line-height: 1.7; /*行距*/
-            }
-            
-            /* 导航栏样式 */
-            ol.navbar {
-            list-style-type: none; /* 去除默认的列表样式 */
-            margin: 0;
-            padding: 0;
-            /*background-color: #a3a3a3; /* 导航栏背景颜色 */
-            }
-
-            ol.navbar li {
-            display: inline-block; /* 将列表项显示为水平排列 */
-            }
-
-            ol.navbar li a {
-            display: block;
-            padding: 5px 30px; /* 调整导航项的内边距 */
-            color: #333; /* 导航项文字颜色 */
-            text-decoration: none;
-            }
-
-            #bottom_line {
-            text-align: center;/*水平居中*/
-            }
-
-        </style>
-
+        <link rel="stylesheet" href="style.css">        
     </head>
 
     <body>
-
+    <section id="app">
         <!-- 导航栏 -->
+        <div class="flex_disply">
         <ol class="navbar">
-            <li><a href="index.html">home</a></li>
-            <li><a href="blog.html">blog</a></li>
-            <li><a href="works.html">works</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><button @click="chose_page(0)">home</button></li>
+            <li><button @click="chose_page(1)">blog</button></li>
+            <li><button @click="chose_page(2)">works</button></li>
         </ol>
+        <ol class="contact">
+            <li><button @click="chose_page(3)">contact</button></li>
+        </ol>
+        </div>
 
-        <h1 class="center">Hello :)</h1>
-        <span class="underline"></span>
+        <!--首页-->
+        <div class="compelete_center" v-if="page[0]">
+            <h1>Hello :)</h1>
+        </div>
 
-        <p id="bottom_line">Welcome! This is the personal site of walkiiiy.</p>
-        
+        <!--博客页-->
+        <div v-else-if="page[1]">
+            <h2>Walkiiiy's blog</h2>
+            <ol id="blog_list">
+                <li><a class="bloglink" href="blog/vue_notebook.html">vue_notebook</a></li>
+                <li><a class="bloglink" href="blog/js数组.html">js数组</a></li>
+                <li><a class="bloglink" href="blog/c++const.html">c++const</a></li>
+                <li><a class="bloglink" href="blog/c++静态变量.html">c++静态变量</a></li>
+                <li><a class="bloglink" href="blog/c++类型转换.html">c++类型转换</a></li>
+                <li><a class="bloglink" href="blog/vim编辑器使用.html">vim编辑器使用</a></li>
+                <li><a class="bloglink" href="blog/photos_23_8_6.html">ptohos_23_8_6</a></li>
+                <li><a class="bloglink" href="blog/photos_old.html">photos_old</a></li>
+                <li><a class="bloglink" href="blog/ubuntu服务器中的lamp架构搭建及配置.html">ubuntu中的lamp架构搭建及配置</a></li>
+                <li><a class="bloglink" href="blog/markdown格式说明.html">markdown格式说明</a></li>
+                <li><a class="bloglink" href="blog/动态规划算法_最长子串.html">动态规划算法_最长子串</a></li>
+                <li><a class="bloglink" href="blog/git.html">git&github</a></li>
+                <li><a class="bloglink" href="blog/贪心算法.html">贪心算法</a></li>
+            </ol>
+        </div>
+
+        <!--works-->
+        <div v-else-if="page[2]">
+            <h2>Walkiiiy's works</h2>
+            <ol id="blog_list">
+                
+            </ol>
+        </div>
+
+        <!--contact-->
+        <div v-else-if="page[3]" id="contact">
+            <p>Feel free to contact me:<br> 3072268178@qq.com<br></p>
+        </div>
+        <!--页脚-->
+        <div id="bottom_line">
+            <p>Welcome! This is the personal site of Walkiiiy.</p>
+        </div>
+    </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+        <script>
+            const app=new Vue({
+                el:"#app",
+                data:{
+                    page:[1,0,0,0],
+                },
+                methods:{
+                    chose_page(id){
+                        this.page=[0,0,0,0];
+                        this.page[id]=1;
+                    }
+                },
+            })            
+        </script>
 
     </body>
 </html>

@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif; /* 使用 Arial 字体，如果不可用则使用 sans-serif 字体作为备选 */
+    color: #333; /* 文字颜色为深灰色 */
+}
+
+/* 首页将文字居中显示 */
+.compelete_center {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 在主轴上居中对齐 */
+    align-items: center; /* 在交叉轴上居中对齐 */
+    height: 70vh; /* 设置容器高度为视口高度的 100%，这样内容会居中显示在屏幕中间 */
+    line-height: 1.7; /*行距*/
+}
+
+
+
+/* 导航栏*/
+.navbar {
+    list-style-type: none; /* 去除默认的列表样式 */
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    height: 10vh;
+    /*background-color: #a3a3a3; /* 导航栏背景颜色 */
+}
+
+.navbar li {
+    display: inline-block; /* 将列表项显示为水平排列 */
+}
+
+.navbar li button {
+    font-size:medium;
+    border: none;
+    background-color:rgb(255, 255, 255);
+    padding: 5px 30px; /* 调整导航项的内边距 */
+    color: #333; /* 导航项文字颜色 */
+}
+
+.contact{
+    width: 20vw;
+    position: absolute;
+    top:0;
+    right:0;
+    list-style-type: none;
+    height: 10vh;
+}
+
+.contact li button{
+    position: absolute;
+    top:0;
+    right: 30px;
+    font-size:medium;
+    border: none;
+    background-color:rgb(255, 255, 255);
+    padding: 0px 0px;
+    text-align: right;
+    color: #333; /* 导航项文字颜色 */
+}
+
+
+/*页脚*/
+#bottom_line{
+    position: absolute;
+    bottom: 10px;
+    height: 5vh;
+    width: 99vw;
+}
+
+#bottom_line p{
+    text-align: center;
+}
+
+
+/*blog列表*/
+/* 未访问链接的样式 */
+#blog_list a { 
+    color: #333; /* 设置链接文字颜色 */
+    text-decoration: none; /* 去掉默认的下划线 */
+    }
+
+/* 鼠标悬停链接的样式 */
+#blog_list a:hover {
+    color: #333; /* 设置链接文字颜色 */
+    text-decoration: underline; /* 添加下划线 */
+}
+
+/* contact页*/
+#contact{
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 在主轴上居中对齐 */
+    align-items: center; /* 在交叉轴上居中对齐 */
+    height: 70vh; /* 设置容器高度为视口高度的 100%，这样内容会居中显示在屏幕中间 */
+    line-height: 1.7; /*行距*/
+}
