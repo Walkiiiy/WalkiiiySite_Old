@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vim&#x7f16;&#x8f91;&#x5668;&#x4f7f;&#x7528;&#x65b9;&#x6cd5;&#x6307;&#x5357;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="vim编辑器使用方法指南">Vim编辑器使用方法指南</h1>
+<h2 id="基本操作">基本操作</h2>
+<ol>
+<li><strong>启动Vim</strong>：在终端中输入 <code>vim</code> 后跟文件名，例如 <code>vim filename.txt</code>。</li>
+<li><strong>退出Vim</strong>：在命令模式下，输入 <code>:q</code> 退出，如果有未保存的修改，输入 <code>:q!</code> 强制退出。</li>
+<li><strong>保存文件</strong>：在命令模式下，输入 <code>:w</code> 来保存文件。</li>
+<li><strong>保存并退出</strong>：在命令模式下，输入 <code>:wq</code> 或者 <code>ZZ</code> 来保存文件并退出Vim。</li>
+</ol>
+<h2 id="模式切换">模式切换</h2>
+<ol>
+<li><strong>命令模式（Normal Mode）</strong>：启动Vim后的默认模式，用于执行各种操作命令。</li>
+<li><strong>插入模式（Insert Mode）</strong>：按下 <code>i</code> 进入插入模式，在此模式下你可以输入文本。</li>
+<li><strong>可视模式（Visual Mode）</strong>：按下 <code>v</code> 进入可视模式，可以选择文本块进行操作。</li>
+</ol>
+<h2 id="常用编辑操作">常用编辑操作</h2>
+<ol>
+<li>
+<p><strong>复制、剪切和粘贴</strong>：</p>
+<ul>
+<li>复制：在命令模式下，移动光标到文本上，输入 <code>y</code> 复制选中的内容。</li>
+<li>剪切：在命令模式下，移动光标到文本上，输入 <code>d</code> 剪切选中的内容。</li>
+<li>粘贴：在命令模式下，移动光标到目标位置，输入 <code>p</code> 粘贴剪切/复制的内容。</li>
+</ul>
+</li>
+<li>
+<p><strong>撤销和重做</strong>：</p>
+<ul>
+<li>撤销：在命令模式下，输入 <code>u</code> 来撤销之前的操作。</li>
+<li>重做：在命令模式下，输入 <code>Ctrl + r</code> 来重做操作。</li>
+</ul>
+</li>
+<li>
+<p><strong>查找和替换</strong>：</p>
+<ul>
+<li>查找：在命令模式下，输入 <code>/</code> 后跟要查找的内容，按回车进行查找，按 <code>n</code> 切换到下一个匹配项。</li>
+<li>替换：在命令模式下，输入 <code>:%s/old/new/g</code> 进行全局替换。</li>
+</ul>
+</li>
+<li>
+<p><strong>移动光标</strong>：</p>
+<ul>
+<li>向上：<code>k</code> 键</li>
+<li>向下：<code>j</code> 键</li>
+<li>向左：<code>h</code> 键</li>
+<li>向右：<code>l</code> 键</li>
+</ul>
+</li>
+</ol>
+
+        
+        
+    </body>
+    </html>

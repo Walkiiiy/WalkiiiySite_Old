@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>&#x52a8;&#x6001;&#x89c4;&#x5212;&#x5bfb;&#x627e;&#x6700;&#x957f;&#x5b57;&#x4e32;&#xff1a;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h2 id="动态规划寻找最长字串">动态规划寻找最长字串：</h2>
+<p>动态规划：通过将问题划分为子问题，并记录和重用子问题的解决方案，来避免重复计算</p>
+<p>最长回文字串问题：
+找到字符串s的最长回文子串</p>
+<pre><code class="language-c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function">string <span class="hljs-title">longestPalindrome</span><span class="hljs-params">(string s)</span> </span>{
+        <span class="hljs-type">int</span> n = s.<span class="hljs-built_in">size</span>();
+        <span class="hljs-keyword">if</span> (n &lt; <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">return</span> s;
+        }
+
+        <span class="hljs-type">int</span> maxLen = <span class="hljs-number">1</span>;
+        <span class="hljs-type">int</span> begin = <span class="hljs-number">0</span>;
+        <span class="hljs-comment">// dp[i][j] 表示 s[i..j] 是否是回文串</span>
+        vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">dp</span>(n, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(n));
+        <span class="hljs-comment">// 初始化：所有长度为 1 的子串都是回文串</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            dp[i][i] = <span class="hljs-literal">true</span>;
+        }
+        <span class="hljs-comment">// 递推开始</span>
+        <span class="hljs-comment">// 先枚举子串长度</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> L = <span class="hljs-number">2</span>; L &lt;= n; L++) {
+            <span class="hljs-comment">// 枚举左边界，左边界的上限设置可以宽松一些</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+                <span class="hljs-comment">// 由 L 和 i 可以确定右边界，即 j - i + 1 = L 得</span>
+                <span class="hljs-type">int</span> j = L + i - <span class="hljs-number">1</span>;
+                <span class="hljs-comment">// 如果右边界越界，就可以退出当前循环</span>
+                <span class="hljs-keyword">if</span> (j &gt;= n) {
+                    <span class="hljs-keyword">break</span>;
+                }
+
+                <span class="hljs-keyword">if</span> (s[i] != s[j]) {
+                    dp[i][j] = <span class="hljs-literal">false</span>;
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-keyword">if</span> (j - i &lt; <span class="hljs-number">3</span>) {
+                        dp[i][j] = <span class="hljs-literal">true</span>;
+                    } <span class="hljs-keyword">else</span> {
+                        dp[i][j] = dp[i + <span class="hljs-number">1</span>][j - <span class="hljs-number">1</span>];
+                    }
+                }
+
+                <span class="hljs-comment">// 只要 dp[i][L] == true 成立，就表示子串 s[i..L] 是回文，此时记录回文长度和起始位置</span>
+                <span class="hljs-keyword">if</span> (dp[i][j] &amp;&amp; j - i + <span class="hljs-number">1</span> &gt; maxLen) {
+                    maxLen = j - i + <span class="hljs-number">1</span>;
+                    begin = i;
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> s.<span class="hljs-built_in">substr</span>(begin, maxLen);
+    }
+};
+</code></pre>
+<p>说明：如果该字符串的头元素和尾元素相等，并且除去头尾的字串是回文子串，则该字符串一定也是回文子串</p>
+
+        
+        
+    </body>
+    </html>

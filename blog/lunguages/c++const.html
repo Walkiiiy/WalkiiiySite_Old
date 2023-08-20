@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>const</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h2 id="const">const</h2>
+<h3 id="1-const-基础">(1) const 基础</h3>
+<p>如果const关键字不涉及到指针则很好理解，下面是涉及到指针的情况：</p>
+<pre><code>int b = 500;
+const int* a = &amp;b; [1]
+int const *a = &amp;b; [2]
+int* const a = &amp;b; [3]
+const int* const a = &amp;b; [4]
+</code></pre>
+<p>可以参考《Effective c++》Item21上的做法，
+如果 const 位于星号的左侧，则 const 就是用来修饰指针所指向的变量，即指针指向为常量；如果 const 位于星号的右侧，const 就是修饰指针本身，即指针本身是常量。</p>
+<p>因此，[1]和[2]的情况相同，都是指针所指向的内容为常量（const放在变量声明符的位置无关），这种情况下不允许对内容进行更改操作，如不能*a = 3；[3]为指针本身是常量，而指针所指向的内容不是常量，这种情况下不能对指针本身进行更改操作，如a++是错误的；[4]为指针本身和指向的内容均为常量。</p>
+<h3 id="2-作为参数">(2) 作为参数</h3>
+<pre><code>void display(const double&amp; r);
+void display(const double* r);
+</code></pre>
+<p>说明:</p>
+<ol>
+<li>在引用或者指针参数的时候使用 const 限制是有意义的，而对于值传递的参数使用 const 则没有意义</li>
+<li>保证引用的变量的值不被改变</li>
+<li>const 在 double 前或者后面意思相同，只是不同的人的写法不同</li>
+</ol>
+<h3 id="3-const对象">(3) const对象</h3>
+<p>声明为 const 的对象只能访问类中声明为 const 的成员函数，不能调用其它成员函数。</p>
+<h3 id="4-const成员函数">(4) const成员函数</h3>
+<pre><code>类型说明符 函数名(参数表) const;
+void print(int i) const;
+</code></pre>
+<p>说明:</p>
+<ol>
+<li>const 是函数类型的一个组成部分，因此在实现部分也要带 const 关键字</li>
+<li>常成员函数不能更新对象的数据成员，也不能调用该类中没有用 const 修饰的成员函数</li>
+</ol>
+
+        
+        
+    </body>
+    </html>
