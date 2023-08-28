@@ -1,0 +1,10 @@
+#text_input input{
+    all:unset;
+    margin-left: 10px;
+}
+#text_input{
+    width: 40vw;
+    height: 30vh;
+    border-style: solid;
+    border-color: black;
+}
