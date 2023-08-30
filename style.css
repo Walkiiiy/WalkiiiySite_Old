@@ -12,6 +12,10 @@ body {
     line-height: 1.7; /*行距*/
 }
 
+.compelete_center h1{
+    font-size:xx-large;
+}
+
 
 
 /* 导航栏*/
