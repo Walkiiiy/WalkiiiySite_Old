@@ -1,3 +1,6 @@
+[v-cloak]{
+    display:none;
+}
 body {
     font-family: Arial, sans-serif; /* 使用 Arial 字体，如果不可用则使用 sans-serif 字体作为备选 */
     color: #333; /* 文字颜色为深灰色 */
@@ -86,6 +89,7 @@ body {
 #blog_list a:hover {
     color: #333; /* 设置链接文字颜色 */
     text-decoration: underline; /* 添加下划线 */
+    cursor: pointer;/*设置手型图标*/
 }
 
 /* contact页*/
@@ -96,3 +100,11 @@ body {
     height: 70vh; /* 设置容器高度为视口高度的 100%，这样内容会居中显示在屏幕中间 */
     line-height: 1.7; /*行距*/
 }
+.slide-fade-enter-active {
+    transition: opacity 1s, transform 1s;
+  }
+  .slide-fade-enter
+  /* .slide-fade-leave-active 用于 2.1.8 以下版本 */ {
+    transform: translateX(10px);
+    opacity: 0;
+  }

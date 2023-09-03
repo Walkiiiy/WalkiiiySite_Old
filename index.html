@@ -8,7 +8,7 @@
     </head>
 
     <body>
-    <section id="app">
+    <section id="app" v-cloak>
         <!-- 导航栏 -->
         <div class="flex_disply">
         <ol class="navbar">
@@ -21,13 +21,17 @@
         </ol>
         </div>
 
+
         <!--首页-->
+        <transition name="slide-fade">
         <div class="compelete_center" v-if="page[0]">
             <h1>Hello :)</h1>
         </div>
+        </transition>
 
         <!--博客页-->
-        <div v-else-if="page[1]">
+        <transition name="slide-fade">
+        <div v-if="page[1]" id="blog">
             <h2>Walkiiiy's blog</h2>
             <ol id="blog_list">
                 <li><a class="bloglink" href="blog/js/js对象和方法.html">js对象和方法</a></li>
@@ -50,19 +54,26 @@
                 <li><a class="bloglink" href="blog/algorithms/贪心算法.html">贪心算法</a></li>
             </ol>
         </div>
+        </transition>
 
         <!--works-->
-        <div v-else-if="page[2]">
+        <transition name="slide-fade">
+        <div v-if="page[2]">
             <h2>Walkiiiy's works</h2>
             <ol id="blog_list">
                 
             </ol>
         </div>
+        </transition>
+
 
         <!--contact-->
-        <div v-else-if="page[3]" id="contact">
+        <transition name="slide-fade">
+        <div v-if="page[3]" id="contact">
             <p>Feel free to contact me:<br> 3072268178@qq.com<br></p>
         </div>
+        </transition>
+
         <!--页脚-->
         <div id="bottom_line">
             <p>Welcome! This is the personal site of Walkiiiy.</p>
