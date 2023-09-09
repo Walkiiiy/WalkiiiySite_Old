@@ -100,6 +100,8 @@ body {
     height: 70vh; /* 设置容器高度为视口高度的 100%，这样内容会居中显示在屏幕中间 */
     line-height: 1.7; /*行距*/
 }
+
+/*淡入动画效果*/
 .slide-fade-enter-active {
     transition: opacity 1s, transform 1s;
   }

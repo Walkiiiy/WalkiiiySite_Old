@@ -1,3 +1,5 @@
+## transition实现淡入淡出动画
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,3 +43,5 @@ el: '#databinding',
 </script>
 </body>
 </html>
+```
+* <transition>标签中只能有一个容器，且应该含有v-if或v-show属性。
