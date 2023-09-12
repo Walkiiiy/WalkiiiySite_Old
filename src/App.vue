@@ -9,7 +9,6 @@ const currentPage = ref(0)
 const chose_page = (type)=> {
     currentPage.value = type
 }
-
 </script>
 
 <template>
