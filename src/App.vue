@@ -108,13 +108,15 @@ body {
 
 /*页脚*/
 #bottom_line{
-    position: absolute;
-    bottom: 10px;
-    height: 5vh;
+    background-color:rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0vh;
+    height: 6vh;
     width: 99vw;
 }
 
 #bottom_line p{
+    font-size: 80%;
     text-align: center;
 }
 
