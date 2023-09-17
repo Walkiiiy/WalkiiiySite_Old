@@ -18,6 +18,7 @@
   </div>
 </template>
 <style scoped>
+
 /* .fade-leave-to, */
 .fade-enter-from {
   /*定义进入开始和离开结束的透明度为0*/

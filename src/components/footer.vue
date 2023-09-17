@@ -6,7 +6,6 @@
 <style>
 /*页脚*/
 #bottom_line{
-    background-color:rgb(255, 255, 255);
     position: fixed;
     bottom: 0vh;
     height: 6vh;

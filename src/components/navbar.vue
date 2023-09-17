@@ -16,10 +16,11 @@
     </li>
     </ul>
 </template>
-<style>
+<style scoped>
 /* 导航栏 */
 .navbar {
     list-style-type: none; /* 去除默认的列表样式 */
+    color:azure;
     margin: 0;
     padding: 0;
     width: 80vw;
@@ -52,7 +53,6 @@
     right: 30px;
     font-size:large;
     border: none;
-    background-color:rgb(255, 255, 255);
     padding: 0px 0px;
     text-align: right;
     color: #333; /* 导航项文字颜色 */

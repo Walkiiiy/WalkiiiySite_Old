@@ -37,7 +37,7 @@
       background-color: #0f0;
   } */
   #blog_list a { 
-      color: #333; /* 设置链接文字颜色 */
+      color:azure; /* 设置链接文字颜色 */
       text-decoration: none; /* 去掉默认的下划线 */
       }
   
