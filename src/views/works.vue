@@ -1,16 +1,14 @@
 <template>
-    <Navbar/>
+    <div>
     <!--works-->
     <h2>Walkiiiy's works</h2>
     <ol id="blog_list">
     </ol>
-    <Footer/>
+    </div>
 </template>
 <script setup>
-import Navbar from '@/components/navbar.vue'
-import Footer from '@/components/footer.vue'
 </script>
-<style>
+<style scoped>
 /* 未访问链接的样式 */
 #blog_list a { 
     color: #333; /* 设置链接文字颜色 */

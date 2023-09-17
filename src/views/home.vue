@@ -1,16 +1,13 @@
 <template>
-    <Navbar />
+    <div>
     <div class="compelete_center">
         <h1>Hello :)</h1>
     </div>
-    <Footer />
-
+    </div>
 </template>
 <script setup>
-import Navbar from '@/components/navbar.vue'
-import Footer from '@/components/footer.vue'
 </script>
-<style>
+<style scoped>
 /* 首页将文字居中显示 */
 .compelete_center {
     display: flex; /* 使用 Flexbox 布局 */

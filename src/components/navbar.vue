@@ -1,7 +1,7 @@
 <template>
     <ul class="navbar">
         <li>
-    <router-link to="/home" >home</router-link>
+    <router-link to="/" >home</router-link>
         </li>
         <li>
     <router-link to="/blog" >blog</router-link>
@@ -17,7 +17,7 @@
     </ul>
 </template>
 <style>
-/* 导航栏*/
+/* 导航栏 */
 .navbar {
     list-style-type: none; /* 去除默认的列表样式 */
     margin: 0;

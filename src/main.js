@@ -1,9 +1,5 @@
-
-import App from './App.vue'
-import {createApp} from 'vue'
+import { createApp } from 'vue'
 import router from './router'
+import App from './App.vue'
 
-
-const app=createApp(App)       
-app.use(router)
-app.mount('#app')//挂载必须在最后！！！！
+createApp(App).use(router).mount('#app')

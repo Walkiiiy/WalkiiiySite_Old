@@ -1,15 +1,13 @@
 <template>
-    <Navbar/>
+    <div>
     <div id="contact">
     <p>Feel free to contact me:<br> 3072268178@qq.com<br></p>
     </div>
-    <Footer/>
+    </div>
 </template>
 <script setup>
-import Navbar from '@/components/navbar.vue'
-import Footer from '@/components/footer.vue'
 </script>
-<style>
+<style scoped>
 /* contact页*/
 #contact{
     display: flex; /* 使用 Flexbox 布局 */
