@@ -18,6 +18,6 @@
 }
 
 .compelete_center h1{
-    font-size:3vw;
+    font-size:xx-large;
 }
 </style>

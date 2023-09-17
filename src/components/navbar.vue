@@ -20,7 +20,6 @@
 /* 导航栏 */
 .navbar {
     list-style-type: none; /* 去除默认的列表样式 */
-    color:azure;
     margin: 0;
     padding: 0;
     width: 80vw;
@@ -33,10 +32,11 @@
 }
 
 .navbar li a {
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    font-size:large;
+    font-size:x-large;
     padding: 5px 30px; /* 调整导航项的内边距 */
-    color: #333; /* 导航项文字颜色 */
+    color:darkolivegreen;/* 导航项文字颜色 */
 }
 #navbar-contact{
     width: 20vw;
@@ -48,14 +48,15 @@
 }
 
 #navbar-contact li a{
+    font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     top:0;
     right: 30px;
-    font-size:large;
+    font-size:x-large;
     border: none;
     padding: 0px 0px;
     text-align: right;
-    color: #333; /* 导航项文字颜色 */
+    color:darkolivegreen;/* 导航项文字颜色 */
     text-decoration: none;
 }
 
