@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="blog_box">
     <!--works-->
     <h2>Walkiiiy's works</h2>
     <ol id="blog_list">
@@ -9,10 +9,16 @@
 <script setup>
 </script>
 <style scoped>
+#blog_box{
+    background-color:rgba(150,150,150,0.05);
+    margin:30px;
+    padding-left: 30px;
+}
 /* 未访问链接的样式 */
 #blog_list a { 
     color: #333; /* 设置链接文字颜色 */
     text-decoration: none; /* 去掉默认的下划线 */
+    font-size: large;  
     }
 
 /* 鼠标悬停链接的样式 */

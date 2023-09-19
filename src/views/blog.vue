@@ -1,6 +1,6 @@
 <template>
   <!--博客页-->
-      <div>
+      <div id="blog_box">
       <h2>Walkiiiy's blog</h2>
       <ol id="blog_list">
           <li><a class="bloglink" href="blog/photos/photos_23_9_9.html">photos_23_9_9</a></li>
@@ -27,19 +27,17 @@
   </template>
   <script setup>
   </script>
-  
   <style scoped>
-  /*blog列表*/
-  /* 未访问链接的样式 */
-  /* .content{
-      width: 100%;
-      height: 90vh;
-      background-color: #0f0;
-  } */
+#blog_box{
+    background-color:rgba(150,150,150,0.05);
+    margin:30px;
+    padding-left: 30px;
+}
   #blog_list a { 
       color:azure; /* 设置链接文字颜色 */
       text-decoration: none; /* 去掉默认的下划线 */
-      }
+    font-size: large;  
+    }
   
   /* 鼠标悬停链接的样式 */
   #blog_list a:hover {
