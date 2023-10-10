@@ -3,6 +3,7 @@
       <div id="blog_box">
       <h2>Walkiiiy's blog</h2>
       <ol id="blog_list">
+        <li><a class="bloglink" href="blog/photos/photos_23_10_10.html">photos_23_10_10</a></li>
           <li><a class="bloglink" href="blog/photos/photos_23_9_9.html">photos_23_9_9</a></li>
           <li><a class="bloglink" href="blog/js/js对象和方法.html">js对象和方法</a></li>
           <li><a class="bloglink" href="blog/vue/vue.js_工程化配置.html">vue.js与vite_工程化 配置</a></li>

@@ -19,13 +19,11 @@
 <style scoped>
 /* 导航栏 */
 .navbar {
-    background-color:rgba(225,228, 196,0.2);
     list-style-type: none; /* 去除默认的列表样式 */
     margin: 0;
     padding-top:  3px;
     width: 80vw;
     height: 4vh;
-    /*background-color: #a3a3a3; /* 导航栏背景颜色 */
 }
 
 .navbar li {
@@ -37,10 +35,9 @@
     text-decoration: none;
     font-size:x-large;
     padding: 5px 30px; /* 调整导航项的内边距 */
-    color:darkolivegreen;/* 导航项文字颜色 */
+    color:azure;/* 导航项文字颜色 */
 }
 #navbar-contact{
-    background-color:rgba(225,228, 196,0.2);
     width: 20vw;
     position: absolute;
     top:0;
@@ -59,7 +56,7 @@
     border: none;
     padding: 0px 0px;
     text-align: right;
-    color:darkolivegreen;/* 导航项文字颜色 */
+    color:azure;/* 导航项文字颜色 */
     text-decoration: none;
 }
 
