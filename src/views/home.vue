@@ -5,13 +5,13 @@
     </div>
     <div style="height: 20vh;"></div>
     <div class="card-group center" style="--card-width:700px; color: black;">
-    <div class="box card" style="background-color:rgba(255, 255, 255, 0.6);">
+    <div class="box card" style="background-color:rgba(255, 255, 255, 0.75);">
             <p class="tit">一个简单的自我介绍</p>
             <p class="body">
-                废柴大学生，专攻各种摆烂和逃课大法。喜欢打mc和瓦罗兰特，也喜欢做项目写前端（bushi）。如果你看到我的works界面是空的，大概是因为啥也不会，根本没有拿得出手的玩意（笑）。另外欢迎来github上骂我：<a href="https://github.com/Walkiiiy" style="color: aliceblue;">一个普通的链接（不是瑟瑟小网站）</a>
+                废柴大学生，专攻各种摆烂和逃课大法。喜欢打mc和瓦罗兰特，也喜欢做项目写前端（bushi）。如果你看到我的works界面是空的，大概是因为啥也不会，根本没有拿得出手的玩意（笑）。另外欢迎来github上骂我：<a href="https://github.com/Walkiiiy" style="color:darkgoldenrod;">一个普通的链接（不是瑟瑟小网站）</a>
             </p>
             <p class="body">
-                Idiot piece of shit,dont know nothing,can't do nothing,an absolote failure.Everyone is welcomed to insult me in my github:<a href="https://github.com/Walkiiiy" style="color: aliceblue;">a normal link(not pornhub)</a>
+                Idiot piece of shit,dont know nothing,can't do nothing,an absolote failure.Everyone is welcomed to insult me in my github:<a href="https://github.com/Walkiiiy" style="color:darkgoldenrod">a normal link(not pornhub)</a>
             </p>
     </div>
     </div>
