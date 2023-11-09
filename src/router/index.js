@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router"
+import { createRouter, createWebHashHistroy } from 'vue-router'
 const routes = [
 {
 path: "/",
@@ -22,7 +22,7 @@ component: () => import("../views/contact.vue"),
 },
 ]
 const router = createRouter({
-history: createWebHistory(),
+history: createWebHashHistroy(),
 routes,
 })
 export default router
