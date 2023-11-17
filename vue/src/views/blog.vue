@@ -21,7 +21,7 @@ export default{
     },
     methods:{
         get_blog_list(){
-            const ipAddress = '127.0.0.1';
+            const ipAddress = '111.231.21.55';
             const port = '3000';
             // 拼接完整的 URL
             const apiUrl = `http://${ipAddress}:${port}/blog_list`;

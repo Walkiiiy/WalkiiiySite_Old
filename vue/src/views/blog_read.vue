@@ -12,7 +12,7 @@ export default{
     methods:{
         async get_markdown(blog_path){ //向后端发起请求，读取md文档转化为html返回给前端
             // 定义 IP 地址和端口号
-            const ipAddress = '127.0.0.1';
+            const ipAddress = '111.231.21.55';
             const port = '3000';
             // 拼接完整的 URL
             const apiUrl = `http://${ipAddress}:${port}/blog_content?path=${blog_path}`;
