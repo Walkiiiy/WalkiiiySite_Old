@@ -7,7 +7,7 @@
     <div style="width: 60vw; color: black; margin: 0 auto;">
     <div style="background-color:rgba(255, 255, 255, 0.7);border-radius: 15px;">
             <h2 class="tit" style="padding-top:15px;padding-left:15px; font-size:xx-large;font-family: 'Courier New', Courier, monospace;">一个简单的自我介绍</h2>
-            <p class="body" style="padding: 15px;font-size: large; font-family: 'Courier New', Courier, monospace;">
+            <p class="body" style="padding: 15px;padding-top:0; font-size: large; font-family: 'Courier New', Courier, monospace;">
                 废柴大学生，专攻各种摆烂和逃课大法。喜欢打mc和瓦罗兰特，也喜欢做项目写前端（bushi）。如果你看到我的works界面是空的，大概是因为啥也不会，根本没有拿得出手的玩意（笑）。另外欢迎来github上骂我：<a href="https://github.com/Walkiiiy" style="color:darkgoldenrod;">一个普通的链接（不是瑟瑟小网站）</a>
             </p>
             <p class="body" style="padding: 15px; padding-bottom: 25px; font-size: large;font-family: 'Courier New', Courier, monospace;">
