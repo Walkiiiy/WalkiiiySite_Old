@@ -1,0 +1,3 @@
+## stream_11.15.md
+* the conflicts of human,ether indivisual or society,starts with man wants more than he needs......
+* a man thinks all the time has nothing to think about but thoughts.a man lives on struggling has no reason to live except pain.
