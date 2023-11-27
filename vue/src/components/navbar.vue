@@ -1,21 +1,21 @@
 <template>
     <ul class="navbar">
         <li>
-    <router-link to="/" >home</router-link>
+    <router-link to="/" >/home</router-link>
         </li>
         <li>
-    <router-link to="/blog" >blog</router-link>
+    <router-link to="/blog" >/blog</router-link>
         </li>
         <li>
-    <router-link to="/works" >works</router-link>
+    <router-link to="/works" >/works</router-link>
         </li>
         <li>
-    <router-link to="/photos" >photos</router-link>
+    <router-link to="/photos" >/photos</router-link>
         </li>
     </ul>
     <ul id="navbar-contact">
     <li>
-        <router-link to="/contact">contact</router-link>
+        <router-link to="/contact">/contact</router-link>
     </li>
     </ul>
 </template>
@@ -63,4 +63,14 @@
     text-decoration: none;
 }
 
+@media (max-width:450px){
+    .navbar li a {
+    padding: 0px 0px; /* 调整导航项的内边距 */
+}
+#navbar-contact li a{
+    top:20px;
+
+}
+
+}
 </style>
