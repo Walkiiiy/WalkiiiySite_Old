@@ -9,6 +9,9 @@
         <li>
     <router-link to="/works" >works</router-link>
         </li>
+        <li>
+    <router-link to="/photos" >photos</router-link>
+        </li>
     </ul>
     <ul id="navbar-contact">
     <li>

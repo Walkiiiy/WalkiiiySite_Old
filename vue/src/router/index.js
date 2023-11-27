@@ -21,6 +21,11 @@ name: "Works",
 component: () => import("../views/works.vue"),
 },
 {
+    path: "/photos",
+    name: "Photos",
+    component: () => import("../views/photos.vue"),
+},    
+{
 path: "/contact",
 name: "Contact",
 component: () => import("../views/contact.vue"),
