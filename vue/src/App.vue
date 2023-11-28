@@ -1,7 +1,3 @@
-<script setup>
-  import Navbar from '/src/components/navbar.vue'
-  import Footer from '/src/components/footer.vue'
-</script>
 <template>
   <div>
     <Navbar/>
@@ -17,6 +13,31 @@
     <Footer/>
   </div>
 </template>
+<script setup>
+import { onMounted, onBeforeUnmount } from 'vue';
+  import Navbar from '/src/components/navbar.vue'
+  import Footer from '/src/components/footer.vue'
+
+  onMounted(() => {
+  changeTitleOnVisibility();
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener('visibilitychange', handleVisibilityChange);
+});
+
+function changeTitleOnVisibility() {
+  const handleVisibilityChange = () => {
+    if (document.visibilityState === 'visible') {
+      document.title = 'Walkiiiy -within cells interlinked';
+    } else {
+      document.title = '+_+';
+    }
+  };
+
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+};
+</script>
 <style scoped>
 
 /* .fade-leave-to, */
