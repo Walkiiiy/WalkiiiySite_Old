@@ -1,6 +1,6 @@
 <template>
     <div class="photo-wall">
-      <img v-for="image in images" :src="'http://111.231.21.55:3000/photos/' + image" :key="image" />
+      <img v-for="image in images" v-lazy="'http://111.231.21.55:3000/photos/' + image" :key="image" />
     </div>
   </template>
   
@@ -29,8 +29,8 @@
   .photo-wall {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 创建动态列数，每列最小宽度为150px，最大为1fr */
-    grid-auto-rows: 150px; /* 每行的高度，调整以满足需求 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 创建动态列数，每列最小宽度为150px，最大为1fr */
+    grid-auto-rows: 250px; /* 每行的高度，调整以满足需求 */
     gap: 0; /* 设置网格间的间隙为0 */
   }
   
