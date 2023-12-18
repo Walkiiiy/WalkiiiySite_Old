@@ -6,7 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">   
         <link rel="icon" href="walkiiiy.icon" type="image/x-icon">  
         <style>
-            body {
+            #app{
+                visibility: hidden;
+            }
+
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #app {
                 font-family:'SimSun',Arial,sans-serif; 
                 color:azure;
                 background-image: url('back_ground.jpg') ;
@@ -24,5 +34,10 @@
     <body>
         <div id="app"></div>
         <script type="module" src="src/main.js"></script>
+        <script>
+        window.onload = function() {
+            document.getElementById("app").style.visibility = "visible";
+        };
+</script>
     </body>
 </html>
