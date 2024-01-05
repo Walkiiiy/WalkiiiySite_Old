@@ -1,22 +1,11 @@
 <template>
-    <div style="height: 180vh;">
+    <div style="height: 94vh;">
     <div class="compelete_center">
         <h1 style="font-size: 6vh;">Hello :)</h1>
     </div>
-    <div style="height: 20vh;"></div>
-    <div style="width: 60vw; color: black; margin: 0 auto;">
-    <div style="background-color:rgba(255, 255, 255, 0.7);border-radius: 15px; width: 80%; margin-left: 10%;">
-            <p class="body" style="padding: 15px;padding-top:20px; padding-bottom: 0%; font-size: large; font-family: 'Courier New', Courier, monospace;">
-                My Bio:
-            </p>
-            <p class="body" style="padding: 15px; padding-bottom: 25px; padding-top:0; font-size: large;font-family: 'Courier New', Courier, monospace;">
-                Idiot piece of shit,dont know nothing,can't do nothing,an absolote failure.Everyone is welcomed to insult me in my github:<a href="https://github.com/Walkiiiy" style="color:darkgoldenrod">a normal link(not pornhub)</a>
-            </p>
-    </div>
-    </div>
     </div>
 </template>
-<script setup>
+<script >
 </script>
 <style scoped>
 /* 首页将文字居中显示 */

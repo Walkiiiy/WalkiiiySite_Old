@@ -3,8 +3,6 @@
         <div id="blog_box">
         <h2 style="color: black; font-size: x-large;">Walkiiiy's blog</h2>
         <ol id="blog_list">
-            <!-- <li>{{blog_list}}</li> -->
-            <!-- <li><router-link :to="{ path: '/blog_read', query: {blog_path:'js数组.md'}}"> js数组 </router-link> </li> -->
             <li v-for="item in blog_list">
                 <router-link :to="{ path: '/blog_read', query: {blog_path:item}}">{{ item }}</router-link>
             </li>

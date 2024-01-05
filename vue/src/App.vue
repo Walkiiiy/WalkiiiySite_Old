@@ -16,11 +16,10 @@
 <script setup>
 import { onMounted, onBeforeUnmount } from 'vue';
   import Navbar from '/src/components/navbar.vue'
-  import Footer from '/src/components/footer.vue'
-
+import Footer from '/src/components/footer.vue'
   onMounted(() => {
   changeTitleOnVisibility();
-});
+  });
 
 onBeforeUnmount(() => {
   document.removeEventListener('visibilitychange', handleVisibilityChange);

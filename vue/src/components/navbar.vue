@@ -24,7 +24,7 @@
 .navbar {
     list-style-type: none; /* 去除默认的列表样式 */
     margin: 0;
-    padding-top:  3px;
+    padding-top:2vh;
     width: 80vw;
     height: 4vh;
 }

@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkwalkiiiy_top"]=self["webpackChunkwalkiiiy_top"]||[]).push([[448],{9448:function(i,n,t){t.r(n),t.d(n,{default:function(){return _}});var l=t(3396);const a=i=>((0,l.dD)("data-v-141b2494"),i=i(),(0,l.Cn)(),i),o={id:"blog_box"},r=a((()=>(0,l._)("h2",null,"Walkiiiy's works",-1))),u=a((()=>(0,l._)("ol",{id:"blog_list"},null,-1))),e=[r,u];function s(i,n){return(0,l.wg)(),(0,l.iD)("div",o,e)}var d=t(89);const c={},k=(0,d.Z)(c,[["render",s],["__scopeId","data-v-141b2494"]]);var _=k}}]);
-//# sourceMappingURL=448.1a5ec31e.js.map
