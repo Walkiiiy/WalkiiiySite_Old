@@ -1,3 +1,3 @@
 ## Old walkiiy.top src
 ### also a vue practice.
-![./pic.png]()
+![Image text](./pic.png)
